@@ -1,0 +1,29 @@
+@mixin responsive-font($pixelSize: 21, $minimum: 4) {
+  $rem: #{$pixelSize / 10}rem;
+  $threeQuarter: ceil($pixelSize - ($pixelSize / 4));
+
+  @if ($minimum != 4) {
+    $threeQuarter: $minimum;
+  }
+
+  // https://css-tricks.com/snippets/css/fluid-typography/
+  // calc( [minimum size]
+  // + ([maximum size] - [minimum size])
+  // * ((100vw - [minimum viewport width])
+  // / ([maximum viewport width] - [minimum viewport width])));
+  font-size: calc(#{$threeQuarter}px + (#{$pixelSize} - #{$threeQuarter}) * ((100vw - 300px) / (1910 - 300)));
+
+  @media #{$lg} {
+    font-size: rem($pixelSize);
+  }
+}
+
+@mixin height-ratio($width, $height, $newHeight: 30) {
+  // Aspect ratio formula src:https://eikhart.com/blog/aspect-ratio-calculator
+  $aspectRatio: $width / $height;
+  $newWidth: ($newHeight * $aspectRatio);
+  //newHeight = ( newWidth / aspectRatio )
+
+  width: em($newWidth);
+  height: em($newHeight);
+}

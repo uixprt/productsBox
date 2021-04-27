@@ -1,0 +1,36 @@
+:root {
+  --scroll-width: #{em(8)};
+  --scroll-thumb-width: #{em(6)};
+  --scroll-track--bg-color: #ccc;
+  --shadow-color: rgba(#212121, 0.8);
+  --scroll-thumb--bg-color: #aaa;
+  --scroll-thumb-hover--bg-color: #ed6696;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: var(--scroll-width);
+  border-radius: calc(0.6 * var(--scroll-width));
+  height: var(--scroll-width);
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--scroll-track--bg-color);
+  border-radius: calc(0.6 * var(--scroll-width));
+  -webkit-box-shadow: inset 0 0 10px var(--shadow-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  width: var(--scroll-thumb-width);
+  height: var(--scroll-thumb-width);
+  background: var(--scroll-thumb--bg-color);
+  border-radius: calc(0.6 * var(--scroll-width));
+  -webkit-box-shadow: inset 0 0 10px var(--shadow-color);
+}
+
+/* Handle on Hover */
+::-webkit-scrollbar-thumb:hover {
+  --scroll-thumb--bg-color: var(--scroll-thumb-hover--bg-color);
+}

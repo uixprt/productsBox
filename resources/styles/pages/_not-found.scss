@@ -1,0 +1,15 @@
+.error404 {
+  .ee-main {
+    background-image: linear-gradient(270deg, #ed6696 0%, #3123ae 100%);
+    color: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .page-header {
+    @include responsive-font(60, 30);
+    font-weight: 700;
+  }
+}

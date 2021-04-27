@@ -1,0 +1,9 @@
+version: '2'
+services:
+  app:
+    build: .
+    ports:
+      - 127.0.0.211:80:80
+    volumes:
+      - .:/var/www/html/
+    restart: always

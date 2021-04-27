@@ -1,0 +1,30 @@
+{
+  "name": "elemexam",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "mix",
+    "build:production": "mix --production",
+    "start": "mix watch",
+    "hot": "mix watch --hot",
+    "clear": "wp acorn optimize:clear",
+    "test": "npm run lint",
+    "lint": "npm run lint:js && npm run lint:css",
+    "lint:js": "eslint resources/scripts",
+    "lint:css": "stylelint \"resources/**/*.{css,scss}\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@prettier/plugin-php": "^0.16.2",
+    "browser-sync": "^2.26.14",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "laravel-mix": "^6.0.18",
+    "postcss": "^8.1",
+    "prettier": "^2.2.1",
+    "sass": "^1.32.11",
+    "sass-loader": "^11.0.1"
+  }
+}

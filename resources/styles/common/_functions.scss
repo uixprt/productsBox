@@ -1,0 +1,35 @@
+$base_font_size_px: 18;
+
+@function em($pixels, $context: $base_font_size_px) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  /* stylelint-disable-next-line */
+  @if ($pixels / $context * 1em == 0 or $pixels / $context * 1em == 0) {
+    @return 0;
+  }
+
+  @return $pixels / $context * 1em;
+}
+
+@function rem($pixels, $context: 10) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  /* stylelint-disable-next-line */
+  @if ($pixels / $context * 1rem == 0 or $pixels / $context * 1rem == 0) {
+    @return 0;
+  }
+
+  @return $pixels / $context * 1rem;
+}

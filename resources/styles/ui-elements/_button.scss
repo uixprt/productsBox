@@ -1,0 +1,18 @@
+.ee-button {
+  $fontSize: 15;
+  font-size: em($fontSize);
+  font-weight: 700;
+
+  border-radius: em(100, $fontSize);
+  padding: em(12, $fontSize) em(25, $fontSize);
+  transition: color 300ms;
+
+  &--outline {
+    color: #434363;
+    border: 2px solid currentColor;
+
+    &:hover {
+      color: #23d378;
+    }
+  }
+}

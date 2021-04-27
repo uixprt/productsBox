@@ -1,0 +1,19 @@
+.ee-footer {
+  $fontSize: 16;
+
+  text-align: center;
+  background-color: #2a323d;
+  padding-top: em(20, $fontSize);
+  padding-bottom: em(20, $fontSize);
+  color: rgba(255, 255, 255, 0.52);
+  font-weight: 300;
+  font-size: em($fontSize);
+
+  a {
+    color: #fff;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
