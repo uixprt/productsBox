@@ -5,14 +5,17 @@
   "main": "index.js",
   "scripts": {
     "build": "mix",
-    "build:production": "mix --production",
+    "prod": "mix --production",
     "start": "mix watch",
     "hot": "mix watch --hot",
     "clear": "wp acorn optimize:clear",
     "test": "npm run lint",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:js": "eslint resources/scripts",
-    "lint:css": "stylelint \"resources/**/*.{css,scss}\""
+    "lint:css": "stylelint \"resources/**/*.{css,scss}\"",
+    "fix": "npm run -s fix:stylelint && npm run -s fix:prettier",
+    "fix:stylelint": "stylelint --fix \"resources/styles/**/*.{css,sass,scss,sss,less}\"",
+    "fix:prettier": "prettier --write \"resources/{cfd/,}{styles,scripts}/**/*.{scss,js}\""
   },
   "keywords": [],
   "author": "",
@@ -21,10 +24,15 @@
     "@prettier/plugin-php": "^0.16.2",
     "browser-sync": "^2.26.14",
     "browser-sync-webpack-plugin": "^2.3.0",
+    "eslint-plugin-import": "^2.22.1",
     "laravel-mix": "^6.0.18",
     "postcss": "^8.1",
     "prettier": "^2.2.1",
     "sass": "^1.32.11",
-    "sass-loader": "^11.0.1"
+    "sass-loader": "^11.0.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-prettier": "^1.2.0",
+    "eslint": "^7.25.0",
+    "stylelint": "^13.13.0"
   }
 }

@@ -1,4 +1,4 @@
-<?php ?>
+<?php $base_path = '/' ?>
 <!doctype html>
 <html lang="en-US">
 <head>
@@ -9,7 +9,7 @@
     <meta name='robots' content='max-image-preview:large'/>
     <link rel='dns-prefetch' href='//fonts.googleapis.com'/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700%2C900">
-    <link rel="stylesheet" href="/public/styles/main.css">
+    <link rel="stylesheet" href="<?php echo $base_path ?>public/styles/main.css">
 </head>
 <body class="home page app-data index-data singular-data page-data page-5-data page-home-data front-page-data">
 <header class="ee-header">
@@ -41,9 +41,9 @@
                     <h2 class="ee-products__title">
                         Tesla Model 3
                     </h2>
-                    <img width="1024" height="640" src="/public/images/tesla-m3-1024x640.jpeg"
+                    <img width="1024" height="640" src="<?php echo $base_path ?>public/images/tesla-m3-1024x640.jpeg"
                          class="attachment-large size-large wp-post-image" alt="" loading="lazy"
-                         srcset="/public/images/tesla-m3-1024x640.jpeg 1024w, /public/images/tesla-m3-300x188.jpeg 300w, /public/images/tesla-m3-768x480.jpeg 768w, /public/images/tesla-m3-1536x960.jpeg 1536w, /public/images/tesla-m3-2048x1280.jpeg 2048w"
+                         srcset="<?php echo $base_path ?>public/images/tesla-m3-1024x640.jpeg 1024w, <?php echo $base_path ?>public/images/tesla-m3-300x188.jpeg 300w, <?php echo $base_path ?>public/images/tesla-m3-768x480.jpeg 768w, <?php echo $base_path ?>public/images/tesla-m3-1536x960.jpeg 1536w, <?php echo $base_path ?>public/images/tesla-m3-2048x1280.jpeg 2048w"
                          sizes="(max-width: 1024px) 100vw, 1024px">
                     <div class="ee-products__footer">
                         <a class="ee-products__button ee-button ee-button--outline"
@@ -57,9 +57,9 @@
                     <h2 class="ee-products__title">
                         Tesla Model S
                     </h2>
-                    <img width="1024" height="640" src="/public/images/tesla-ms-1024x640.jpeg"
+                    <img width="1024" height="640" src="<?php echo $base_path ?>public/images/tesla-ms-1024x640.jpeg"
                          class="attachment-large size-large wp-post-image" alt="" loading="lazy"
-                         srcset="/public/images/tesla-ms-1024x640.jpeg 1024w, /public/images/tesla-ms-300x188.jpeg 300w, /public/images/tesla-ms-768x480.jpeg 768w, /public/images/tesla-ms-1536x960.jpeg 1536w, /public/images/tesla-ms-2048x1280.jpeg 2048w"
+                         srcset="<?php echo $base_path ?>public/images/tesla-ms-1024x640.jpeg 1024w, <?php echo $base_path ?>public/images/tesla-ms-300x188.jpeg 300w, <?php echo $base_path ?>public/images/tesla-ms-768x480.jpeg 768w, <?php echo $base_path ?>public/images/tesla-ms-1536x960.jpeg 1536w, <?php echo $base_path ?>public/images/tesla-ms-2048x1280.jpeg 2048w"
                          sizes="(max-width: 1024px) 100vw, 1024px">
                     <div class="ee-products__footer">
                         <a class="ee-products__button ee-button ee-button--outline"
@@ -73,9 +73,9 @@
                     <h2 class="ee-products__title">
                         Tesla Model X
                     </h2>
-                    <img width="1024" height="640" src="/public/images/tesla-mx-1024x640.jpeg"
+                    <img width="1024" height="640" src="<?php echo $base_path ?>public/images/tesla-mx-1024x640.jpeg"
                          class="attachment-large size-large wp-post-image" alt="" loading="lazy"
-                         srcset="/public/images/tesla-mx-1024x640.jpeg 1024w, /public/images/tesla-mx-300x188.jpeg 300w, /public/images/tesla-mx-768x480.jpeg 768w, /public/images/tesla-mx-1536x960.jpeg 1536w, /public/images/tesla-mx-2048x1280.jpeg 2048w"
+                         srcset="<?php echo $base_path ?>public/images/tesla-mx-1024x640.jpeg 1024w, <?php echo $base_path ?>public/images/tesla-mx-300x188.jpeg 300w, <?php echo $base_path ?>public/images/tesla-mx-768x480.jpeg 768w, <?php echo $base_path ?>public/images/tesla-mx-1536x960.jpeg 1536w, <?php echo $base_path ?>public/images/tesla-mx-2048x1280.jpeg 2048w"
                          sizes="(max-width: 1024px) 100vw, 1024px">
                     <div class="ee-products__footer">
                         <a class="ee-products__button ee-button ee-button--outline"
@@ -106,6 +106,11 @@
 <footer class="ee-footer">
     This website was built for demonstration purposes only by <a href="https://uixprt.com" target="_blank">@uixprt</a>.
 </footer>
+<script type='text/javascript' id='sage/main.js-js-extra'>
+    /* <![CDATA[ */
+    var main = {"api_base_url":"<?php echo $base_path; ?>api"};
+    /* ]]> */
+</script>
 <script defer src="public/scripts/main.js"></script>
 </body>
 </html>

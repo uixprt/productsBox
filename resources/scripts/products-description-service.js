@@ -17,10 +17,7 @@ export class ProductionDescriptionService {
       return this.cachePromise;
     }
 
-    // best practice to using wp-rest-api
-    // you can use `/ee-api/${id}` with brand new implementation for the challenge
-    // and you can remove the second `then()` completely because the description return in the first `response`
-    this.cachePromise = fetch(`/api/${id}`)
+    this.cachePromise = fetch(`${main.api_base_url}/${id}`)
       .then((response) => response.json())
       .then((results) => {
         this.cache[id] = results;
