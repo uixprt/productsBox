@@ -1,5 +1,4 @@
 const mix = require('laravel-mix');
-
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -13,7 +12,7 @@ const mix = require('laravel-mix');
 
 mix.setPublicPath('./public').browserSync({
   proxy: 'elemexam.test',
-  port: '3211'
+  port: '3211',
 });
 
 mix.sass('resources/styles/main.scss', 'styles').options({
@@ -24,4 +23,5 @@ mix.js('resources/scripts/main.js', 'scripts');
 
 mix.copyDirectory('resources/images', 'public/images');
 
-mix.sourceMaps().version();
+let productionSourceMaps = false;
+mix.sourceMaps(productionSourceMaps, 'source-map').version();
