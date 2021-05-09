@@ -16,8 +16,6 @@ abstract class AjaxController implements AjaxInterface
 
   public function getById(int $id): string
   {
-    $productsDescription = $this->fetch();
-
-    return json_encode($productsDescription->$id);
+    return json_encode($this->fetch()->$id);
   }
 }
