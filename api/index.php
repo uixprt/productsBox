@@ -5,7 +5,8 @@
   use EeApi\Controllers\ProductsController;
   
   include( './Route.php' );
-  include( './Controllers/AbstractController.php' );
+  include('./Controllers/AjaxInterface.php');
+  include('./Controllers/AjaxController.php');
   include( './Controllers/ProductsController.php' );
   
   header( 'Content-Type: application/json' );
