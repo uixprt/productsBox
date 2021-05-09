@@ -114,9 +114,9 @@ $api_base_url = '/api';
 <footer class="ee-footer">
     This website was built for demonstration purposes only by <a href="https://uixprt.com" target="_blank">@uixprt</a>.
 </footer>
-<script type='text/javascript' id='sage/main.js-js-extra'>
+<script type='text/javascript'>
     /* <![CDATA[ */
-    var main = {"api_base_url": "<?php echo $api_base_url ?>"};
+    var main = {"apiBaseUrl": "<?php echo $api_base_url ?>"};
     /* ]]> */
 </script>
 <script defer src="public/scripts/main.js"></script>

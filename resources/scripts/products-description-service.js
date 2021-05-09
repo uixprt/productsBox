@@ -17,7 +17,7 @@ export class ProductionDescriptionService {
       return this.cachePromise;
     }
 
-    this.cachePromise = fetch(`${main.api_base_url}/${id}`)
+    this.cachePromise = fetch(`${main.apiBaseUrl}/${id}`)
       .then((response) => response.json())
       .then((results) => {
         this.cache[id] = results;

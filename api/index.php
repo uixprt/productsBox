@@ -8,8 +8,18 @@
   include('./Controllers/AjaxInterface.php');
   include('./Controllers/AjaxController.php');
   include( './Controllers/ProductsController.php' );
-  
+
   header( 'Content-Type: application/json' );
+
+  $origin = $_SERVER['HTTP_ORIGIN'];
+  $allowed_domains = [
+      'https://v2.elemexam.xyz',
+      'https://uixprt.github.io',
+  ];
+
+  if (in_array($origin, $allowed_domains)) {
+      header('Access-Control-Allow-Origin: ' . $origin);
+  }
 
   error_reporting( E_ALL );
   ini_set( "display_errors", 1 );
