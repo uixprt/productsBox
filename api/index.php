@@ -15,6 +15,7 @@
   $allowed_domains = [
       'https://v2.elemexam.xyz',
       'https://uixprt.github.io',
+      'https://v2.elem.uixprt.com'
   ];
 
   if (in_array($origin, $allowed_domains)) {
