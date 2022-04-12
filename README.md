@@ -10,7 +10,4 @@
 - Docker as a local development environment, configure by docker-compose
 
 You can check it live:
-https://v2.elem.uixprt.com
-
-or on GitHub pages:
-https://uixprt.github.io/productsBox/
+https://pb.uixprt.com
